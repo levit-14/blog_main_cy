@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Blog de Django</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; line-height: 1.6; }
+        .post { margin-bottom: 20px; border-bottom: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/"><strong>Inicio</strong></a>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

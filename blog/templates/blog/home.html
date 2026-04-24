@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Últimas Publicaciones</h1>
+
+    {% for post in posts %}
+        <article class="post">
+            <h2>{{ post.title }}</h2>
+            <small>Publicado el: {{ post.created_at }}</small>
+            <p>{{ post.body|truncatewords:30 }}</p>
+            <a href="{% url 'post_detail' post.id %}">Leer más...</a>
+        </article>
+    {% empty %}
+        <p>No hay posts publicados todavía. Ve al panel de Admin y crea uno.</p>
+    {% endfor %}
+{% endblock %}
